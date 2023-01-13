@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="text-align: center ;color: orangered" > Quán giải khát CodeGym  </h1>
+<div>
+    <h2 style="text-align: center;color: orange"> Menu quán </h2>
+    <p>
+        <label>
+            1.<input type="checkbox"> Cafe
+        </label> <br> <br>
+        <label>
+            <input id="number1" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkOne()"> <br> <br>
+        </label>
+        <b id="price1" > </b>
+        <br>
+    </p>
+    <p>
+        <label>
+            2.<input type="checkbox"> Cam vắt
+        </label> <br> <br>
+        <label>
+            <input id="number2" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkTwo()"> <br> <br>
+        </label>
+        <b id="price2" > </b> <br> <br>
+
+    </p>
+    <p>
+        <label>
+            3.<input type="checkbox"> Nước ép cà rốt
+            <br> <br>
+            <input id="number3" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkOne()"> <br> <br>
+        </label>
+        <b id="price3" > </b>
+    </p>
+    <p>
+        <label>
+            4.<input type="checkbox"> Nước ép cà chua
+            <br> <br>
+            <input id="number4" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkOne()"> <br> <br>
+        </label>
+        <b id="price4" > </b>
+    </p>
+    <p>
+        <label>
+            5.<input type="checkbox"> Nước lọc
+            <br> <br>
+            <input id="number5" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkThree()"> <br> <br>
+        </label>
+        <b id="price5" > </b>
+    </p>
+    <p>
+        <label>
+            6.<input type="checkbox"> Nước dừa
+            <br> <br>
+            <input id="number6" type="number" placeholder="Nhập số lượng đồ uống " oninput="checkTwo()"> <br> <br>
+        </label>
+        <b id="price6" > </b>
+    </p>
+</div>
+<div>
+    <p>
+        <label>
+            <button onclick="checkFour()"> Thành tiền </button>
+        </label>
+        <b id="result">  </b>
+    </p>
+
+</div>
+</body>
+<script>
+    let it3 = [0,0,0,0,0,0]
+    function doSth1(numbers1){
+        return 15000 * numbers1;
+    }
+    function checkOne(){
+        let input1 = document.getElementById('number1').value;
+        it3[0]=input1;
+        document.getElementById('price1').innerHTML = doSth1(input1)+" VNĐ";
+        let input3 = document.getElementById('number3').value;
+        it3[2]=input3;
+        document.getElementById('price3').innerHTML = doSth1(input3) + ' VNĐ';
+        let input4 = document.getElementById('number4').value;
+        it3[3]=input4;
+        document.getElementById('price4').innerHTML = doSth1(input4) + ' VNĐ';
+    }
+    function doSth2(numbers2){
+        return 20000 * numbers2;
+    }
+    function checkTwo(){
+        let input2 = document.getElementById('number2').value;
+        it3[1]=input2;
+        document.getElementById('price2').innerHTML = doSth2(input2) + ' VNĐ';
+        let input6 = document.getElementById('number6').value;
+        it3[5]=input6;
+        document.getElementById('price6').innerHTML = doSth2(input6) + ' VNĐ';
+    }
+    function doSth3(numbers3){
+        return 10000 * numbers3;
+    }
+    function checkThree(){
+        let input5 = document.getElementById('number5').value;
+        it3[4]=input5;
+        document.getElementById('price5').innerHTML = doSth3(input5) + ' VNĐ';
+    }
+    function checkFour(){
+        document.getElementById('result').innerHTML = doSth1(it3[0])+ doSth1(it3[2])+doSth1(it3[3]) + doSth2(it3[1])+doSth2(it3[5]) + doSth3(it3[4]);
+        result.toString();
+    }
+</script>
+</html>

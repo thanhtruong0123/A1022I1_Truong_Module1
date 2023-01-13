@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap</title>
+</head>
+<body>
+    <script>
+        let inputphysics;
+        let inputchemistry;
+        let inputbiology;
+        inputphysics = prompt('Enter the Physics grade');
+        inputchemistry = prompt('Enter the Chemistry grade');
+        inputbiology = prompt('Enter the Biology grade');
+        physics = parseInt(inputphysics);
+        chemistry = parseInt(inputchemistry);
+        biology = parseInt(inputbiology);
+        let total = physics + chemistry + biology;
+        let average = (physics + chemistry + biology)/3;
+            alert('Your total score is:'+total);
+            alert('Your average score is:'+average);
+    </script>
+</body>
+</html>

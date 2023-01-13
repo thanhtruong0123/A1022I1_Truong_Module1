@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            background-color:#FFC6D3;
+            text-align:center;
+        }
+        button {
+            background-color: #E98EAD;
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 50px;
+            width: 75%;
+            margin: 0;
+            padding: 10px 16px;
+            position: relative;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="3" style="color:#3A4F7A;font-size: 25px;font-family:Pacifico;">
+                <h3> MENU </h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="cafe_drink()"> 1. Cafe </button>
+            </td>
+            <td>
+                <button type="button" onclick="orange_drink()"> 2. Cam vắt </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="carrot_drink()"> 3. Nước ép cà rốt </button>
+            </td>
+            <td>
+                <button type="button" onclick="tomato_drink()"> 4. Nước ép cà chua </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="water_drink()"> 5. Nước lọc </button>
+            </td>
+            <td>
+                <button type="button" onclick="coconut_drink()"> 6. Nước dừa </button>
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="2" style="height:50px; background-color: white" >
+               <span id="bill"> </span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"> <hr style="background-color:white; border-color:white"> </td>
+        </tr>
+        <tr>
+            <td style="color:#3A4F7A; height:50px">
+                <b> Price: </b>
+            </td>
+            <td>
+                <input type="number" id="result" style="width:100px"/>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    // function cafe_drink() {
+    //     return "Cafe: <input type=input> ly </br> Đơn Giá: 15000VND";
+    // }
+    // function orange_drink() {
+    //     return "Nước Cam: <input type=input> ly </br> Đơn Giá: 20000VND";
+    // }
+    // function carrot_drink() {
+    //     return "Nước ép cà rốt: <input type=input> ly </br> Đơn Giá: 25000VND";
+    // }
+    // function tomato_drink() {
+    //     return "Nước ép cà chua: <input type=input> ly </br> Đơn Giá: 30000VND";
+    // }
+    // function water_drink() {
+    //     return "Nước lọc: <input type=input> ly </br> Đơn Giá: 10000VND";
+    // }
+    // function coconut_drink() {
+    //     return "Nước dừa: <input type=input> ly </br> Đơn Giá: 3500VND";
+    // }
+    // function finalBill() {
+    //     return document.getElementById("bill").innerHTML = cafe_drink()
+    //     + orange_drink()
+    //     + carrot_drink()
+    //     + tomato_drink()
+    //     + water_drink()
+    //     + water_drink()
+    //     + coconut_drink();
+    // }
+
+</script>
+</html>

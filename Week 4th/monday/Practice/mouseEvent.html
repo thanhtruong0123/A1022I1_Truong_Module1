@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseEvent</title>
+</head>
+<body>
+    <img id="myimg" width="200px" src="https://bom.so/GLlZUs" />
+    <p> Click button below to move the image to right </p>
+<!--    <button type="button" onclick="moveRight()"> Click Me</button>-->
+    <input type="button" onclick="moveRight()" value="Click Me" />
+</body>
+    <script>
+        let imgball = null;
+        imgball = document.getElementById("myimg");
+        function init() {
+            imgball = document.getElementById("myimg");
+            imgball.style.position = "relative";
+            imgball.style.left = "0px";
+        }
+        function moveRight() {
+            imgball.style.left = parseInt(imgball.style.left) + 10 + "px";
+        }
+        window.onload = init;
+    </script>
+</html>

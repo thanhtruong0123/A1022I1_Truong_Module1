@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3> APP Tính Diện Tích Và Chu Vi Hình Tròn </h3>
+    <table>
+        <tr>
+            <td> Bán Kính Hình Tròn Là: </td>
+            <td>
+                <input id="inputRadius" type="number" placeholder="Nhập Bán Kính"
+                onInput="merge(this.value)" />
+            </td>
+        </tr>
+        <tr>
+            <td> <b> Chu Vi: </b></td>
+            <td id="result_Perimeter"></td>
+        </tr>
+        <tr>
+            <td> <b> Diện Tích: </b></td>
+            <td id="result_Area"></td>
+        </tr>
+    </table>
+</body>
+<script>
+    function merge(radius) {
+        perimeter_Circle(radius);
+        area_Circle(radius);
+    }
+    function perimeter_Circle(radius) {
+        let perimeter;
+        return perimeter = document.getElementById("result_Perimeter").innerHTML = radius * 2 * 3.14;
+    }
+    function area_Circle(radius) {
+        let area;
+        return area = document.getElementById("result_Area").innerHTML = radius * radius * 3.14;
+    }
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td> Amount</td>
+        <td> From Curency</td>
+        <td> To Curency</td>
+    </tr>
+    <tr>
+        <td><input type="text"id="nhapvao"></td>
+        <td><select id="select1">
+            <option value="vnd">Việt Nam</option>
+            <option value="usd">USA</option>
+            <option value="krw">Hàn Quốc</option>
+            <option value="aud">Úc</option>
+            <option value="cny">Trung quốc</option>
+            <option value="jpy">Nhật Bản</option>
+        </select></td>
+        <td><select id="select2">
+            <option value="vnd">Việt Nam</option>
+            <option value="usd">USA</option>
+            <option value="krw">Hàn Quốc</option>
+            <option value="aud">Úc</option>
+            <option value="cny">Trung quốc</option>
+            <option value="jpy">Nhật Bản</option>
+        </select></td>
+        <td><button onclick="chuyendoi()"> Convert</button></td>
+    </tr>
+</table>
+<script>
+    function chuyendoi() {
+        let giatrivao=document.getElementById('nhapvao').value;
+        let select1=document.getElementById('select1').value;
+        let select2=document.getElementById('select2').value;
+        if(select1==select2){
+            alert(giatrivao);
+        }
+        if (select1=="vnd"&&select2=="usd"){
+            alert(giatrivao/24000);
+        }
+        if(select1=="vnd"&&select2=="krw"){
+            alert(giatrivao*0.05395)
+        }
+        if(select1=="vnd"&&select2=="aud"){
+            alert(giatrivao/16709)
+        }
+        if(select1=="vnd"&&select2=="cny"){
+            alert(giatrivao/3400)
+        }
+        if(select1=="vnd"&&select2=="jpy"){
+            alert(giatrivao/17777)
+        }
+    }
+</script>
+</body>
+</html>

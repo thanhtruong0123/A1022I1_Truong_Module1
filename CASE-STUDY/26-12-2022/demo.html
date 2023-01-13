@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 1px solid silver;
+            width: 900px;
+            height: 50px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="addStudent(); showListProducts()"> Thêm mới học viên </button>
+    <button type="button" onclick="editStudent();"> Sửa thông tin học viên </button>
+    <button type="button"> Xóa học viên </button>
+    <p> &nbsp;</p>
+    <div id="list-students"></div>
+</body>
+<script>
+    class Student {
+        constructor(code, name, className, email, birthDay, moduleName) {
+            this.code = code;
+            this.name = name;
+            this.className = className;
+            this.email = email;
+            this.birthDay = birthDay;
+            this.moduleName = moduleName;
+        }
+    }
+
+    let students = []; // mang chua tat ca cac doi tuong product
+
+    function showListProducts() {
+        let str = '<table>';
+        str += `
+            <tr>
+            <th> Mã học viên </th>
+            <th> Tên </th>
+            <th> Lớp </th>
+            <th> Email </th>
+            <th> Ngày sinh </th>
+            </tr>
+        `;
+
+        for (let i = 0; i < students.length; i++) {
+            str += `
+                <tr>
+                    <td>
+                    ${students[i].code}
+                    </td>
+                    <td>
+                    ${students[i].name}
+                    </td>
+                    <td>
+                    ${students[i].className}
+                    </td>
+                    <td>
+                    ${students[i].email}
+                    </td>
+                    <td>
+                    ${students[i].birthDay}
+                    </td>
+                    <td>
+                    ${students[i].moduleName}
+                    </td>
+                </tr>
+            `
+        }
+
+        str += '</table>';
+
+        document.getElementById('list-students').innerHTML = str;
+    }
+
+    function addStudent() {
+        let student = new Student();
+        const code = prompt("Nhap ma hoc vien");
+        student.code = code;
+        const name = prompt("Nhap ten hoc vien");
+        student.name = name;
+        const className = prompt("Nhap lop hoc vien");
+        student.className = className;
+        const email = prompt("Nhap email hoc vien");
+        student.email = email;
+        const birthDay = prompt("Nhap ngay sinh hoc vien");
+        student.birthDay = birthDay;
+        const moduleName = prompt("Nhap Module hoc vien");
+        student.moduleName = moduleName;
+
+        students.push(student);
+    }
+
+    function editStudent() {
+        let codeEdit = prompt("Nhap ma hoc vien ban muon edit");
+        for (let i = 0; i < students.length; i++) {
+            if (codeEdit === students[i].code) {
+
+            }
+        }
+    }
+</script>
+</html>

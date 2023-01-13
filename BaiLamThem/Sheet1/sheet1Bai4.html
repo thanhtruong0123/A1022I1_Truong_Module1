@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function checkString(stringArr) {
+        result = false;
+        let countUpper = 0;
+        let countLower = 0;
+        for (let i = 0; i < stringArr.length; i++) {
+            if (stringArr[i] == stringArr[i].toUpperCase()) {
+                countUpper++;
+            } else {
+                countLower++;
+            }
+        }
+        if (countUpper === countLower) {
+            result = true;
+        }
+        return result;
+    }
+    let inputString = prompt("Nhập 1 chuỗi bất kỳ.");
+    let theResult = checkString(inputString);
+    alert(theResult);
+</script>
+</html>

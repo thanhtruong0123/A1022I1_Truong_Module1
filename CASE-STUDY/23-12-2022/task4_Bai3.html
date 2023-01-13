@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function commonCharacterCount(s1,s2) {
+        let resultArr = [];
+        let compareChar;
+        for (let i = 0; i < s1.length; i++) {
+            compareChar = s1[i];
+            if (s2.includes(compareChar)) {
+                resultArr.push(compareChar);
+            }
+        }
+        return resultArr
+    }
+    let inputArr1 = prompt("Enter first string");
+    let inputArr2 = prompt("Enter second string");
+    let result = commonCharacterCount(inputArr1,inputArr2);
+    document.write(result);
+</script>
+</html>

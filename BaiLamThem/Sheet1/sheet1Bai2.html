@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function checkArray(array) {
+        let result = true;
+        let firstHalf = array.slice(0, array.length/2);
+        let lastHalf = array.slice(array.length/2);
+        for (let i = 0; i < array.length/2; i++) {
+            if (firstHalf[i] * firstHalf[i] !== lastHalf[i]) {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+    let inputArray = [];
+    inputArray.length = +prompt("Nhập Độ Dài Của Mảng");
+    for (let i = 0; i < inputArray.length; i++) {
+        inputArray[i] = +prompt("Nhập Giá Trị Mảng Tại Vị Trí " + i);
+    }
+    let lastResult = checkArray(inputArray);
+    alert(lastResult);
+</script>
+</html>

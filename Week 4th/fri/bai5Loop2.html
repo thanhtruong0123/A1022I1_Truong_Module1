@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let P = +prompt("Nhập số tiền gốc");
+    let r = +prompt("Nhập lãi suất ngân hàng hằng năm (đơn vị: %)");
+    let t = +prompt("Nhập số năm vay");
+
+    for (let i = 0; i < t; i++) {
+        P = P*(r/100) + P;
+    }
+    alert(P);
+</script>
+</html>

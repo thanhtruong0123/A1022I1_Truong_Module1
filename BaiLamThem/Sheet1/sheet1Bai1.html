@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let lengthOfArray = +prompt("Nhập Độ Dài Của Mảng");
+    let array = [];
+    let countOdd = 0;
+    let countEven = 0;
+
+    array.length = lengthOfArray;
+
+    for (let i = 0; i < array.length; i++) {
+        array[i] = +prompt("Nhập Giá Trị Mảng Tại Vị Trí Thứ " + i);
+        if (array[i]%2 === 0) {
+            countEven++;
+        } else {
+            countOdd++
+        }
+    }
+
+    if (countEven === countOdd) {
+        document.write("OK");
+    } else {
+        document.write("NO");
+    }
+
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function find_Min(array) {
+        let min = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (min > array[i]) {
+                min = array[i]
+            }
+        }
+        return min;
+    }
+    let inputArray = [];
+    inputArray.length = +prompt("Nhập chiều dài cũng mảng");
+    for (let i = 0; i < inputArray.length; i++) {
+        inputArray[i] = parseInt(prompt("Nhập giá trị mảng tại vị trí thứ " + i));
+    }
+    let theResult = find_Min(inputArray);
+    document.write("Giá trị nhỏ nhất của mảng trên là " + theResult);
+</script>
+</html>
